@@ -1,9 +1,3 @@
-async function onload(){
-    let text = $("#test-text").text();
-    let proc_text  = await utdWordApi.processText(text);
-
-    $("#test-text-response").html(proc_text);
-}
 
 async function run(){
     let words = ["sepsis"];
@@ -12,12 +6,13 @@ async function run(){
 }
 
 
-utdWordApi.watchWords();
+let processed_text = utdWordApi.processText("Texto de prueba");
+console.log(processed_text);
 
-$("#search_button").click(async function(){
+//utdWordApi.watchWords();
 
+$("#getLinks_button").click(async function(){
     let result = await utdWordApi.getLinks_fromArray();
-
     console.log(result);
 });
 
