@@ -7,7 +7,7 @@ let utd_results;
 let utd_obj;
 
 const utdWordApi = {
-    processText: async function(text){
+    processText: function(text){
         let txt_array = text.split(" ");
         for(let i = 0; i < txt_array.length; i++){
             txt_array[i] = `<a class="word">${txt_array[i]}</a> `;
