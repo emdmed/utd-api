@@ -1,4 +1,4 @@
-# utd-api
+# utd-api.js
 
 ## English
 
