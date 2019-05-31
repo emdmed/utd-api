@@ -46,12 +46,18 @@ const utdWordApi = {
             if($(this).attr("class") === "word"){
                 //add to array
                 word_search_array.push($(this).text());
+                $(this).css({
+                    "textDecoration": "underline"
+                })
                 $(this).attr("class", "word clicked");
                 console.log(word_search_array);
             } else{
                 //remove from array
                 let remove_this_index = word_search_array.indexOf($(this).text());
                 word_search_array.splice(remove_this_index, 1);
+                $(this).css({
+                    "textDecoration": "none"
+                })
                 $(this).attr("class", "word");
                 console.log("removed", $(this).text(), " - ", word_search_array);
                 

@@ -7,9 +7,10 @@ async function run(){
 
 
 let processed_text = utdWordApi.processText("Texto de prueba");
+$("#test-text-response").html(processed_text);
 console.log(processed_text);
 
-//utdWordApi.watchWords();
+utdWordApi.watchWords();
 
 $("#getLinks_button").click(async function(){
     let result = await utdWordApi.getLinks_fromArray();
