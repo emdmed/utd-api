@@ -6,6 +6,7 @@ const api_handler = require("../handlers/api_handler");
 
 router.post("/utd_links", async (req, res)=>{
     let data = req.body;
+    console.log(req.body)
     let results;
     console.log("Route utd_links: ", data);
     

@@ -42,6 +42,7 @@ const API = {
           });
           
           await instance.exit();
+          console.log(a_array)
           return a_array;
         })();
         return result;
